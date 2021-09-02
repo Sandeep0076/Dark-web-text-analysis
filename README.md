@@ -3,18 +3,21 @@ In this work, a dataset of articles collected from Darkweb is given. My task is 
 
 To perform the analysis, following Work is done :
 
-Cleaned the text.
+* Cleaned the text.
+* Applied all the preprocessing steps like:
+    * Removing stopwords
+    * lowercase
+    * tokenization (tf-idf)
+    * lemmetization
+    * vectorization
+    
+* As the dataset was huge, used Principle Component Analysis (PCA) for dimensionality reduction.
 
-As the dataset was huge, used Principle Component Analysis (PCA) for dimensionality reduction.
+* Thereafter clustered the documents so that I can segregate the similar kind of documents for that I Used K-means clustering for clustering.
 
-Used K-means clustering for clustering the articles.
+*  Thereafter for visulization of the clustered data in 2D I used t-SNE.
 
-Used t-SNE for dimensionality reduction just for the sake of visualization.
-
-On each cluster used LDA (Latent Dirichlet Allocation) for topic modeling
-Then extracted keywords for each clusters.
-In another work on same dataset. Did an analysis of 5 different text extractive summarization
-
-In the last Extracted summary is created for each cluster(10).
-
-Along with that word cloud is presented to visualize the most important words
+* Further On each cluster documents, I did topic modeling as each document can contain multiple topics : for that I used LDA (Latent Dirichlet Allocation)
+* Then extracted keywords for each clusters. To create a visual wordcloud
+* In another work on same dataset. Did an analysis of 5 different text extractive summarization
+* In the last Extracted summary is created for each cluster.
